@@ -1,0 +1,175 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.phaseTitle {
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.statusBar {
+  width: 100%;
+  max-width: 800px;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+  border: 2px solid var(--accent-green);
+  background: rgba(0, 255, 65, 0.05);
+  transition: all 0.3s ease;
+}
+
+.statusNormal {
+  border-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+.statusHit {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  box-shadow: 0 0 15px var(--accent-red);
+  animation: shake 0.3s ease;
+}
+
+.statusSunk {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  box-shadow: 0 0 20px var(--accent-orange);
+  animation: shake 0.3s ease;
+}
+
+.statusThinking {
+  border-color: var(--accent-yellow);
+  color: var(--accent-yellow);
+  box-shadow: 0 0 10px var(--accent-yellow);
+}
+
+.dots {
+  display: inline-block;
+  animation: blink 0.5s step-end infinite;
+}
+
+.turnIndicator {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.turnBox {
+  padding: 8px 20px;
+  border: 2px solid rgba(0, 255, 65, 0.3);
+  font-size: 9px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+  color: rgba(0, 255, 65, 0.4);
+}
+
+.activeTurn {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 10px var(--accent-cyan);
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.shipsCount {
+  font-size: 7px;
+  opacity: 0.8;
+}
+
+.vs {
+  font-size: 12px;
+  color: var(--accent-yellow);
+  text-shadow: 0 0 8px var(--accent-yellow);
+}
+
+.battleArea {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.boardSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.boardLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.boardLabel span {
+  font-size: 9px;
+  letter-spacing: 3px;
+}
+
+.retro-text-green {
+  color: var(--accent-green);
+  text-shadow: 0 0 5px var(--accent-green);
+}
+
+.retro-text-red {
+  color: var(--accent-red);
+  text-shadow: 0 0 5px var(--accent-red);
+}
+
+.shipStatus {
+  display: flex;
+  gap: 5px;
+}
+
+.shipDot {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.shipDotAlive {
+  background: var(--accent-green);
+  box-shadow: 0 0 4px var(--accent-green);
+}
+
+.shipDotSunk {
+  background: var(--accent-red);
+  opacity: 0.4;
+}
+
+.logSection {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+@media (max-width: 900px) {
+  .battleArea {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logSection {
+    width: 100%;
+    max-width: 400px;
+  }
+}
