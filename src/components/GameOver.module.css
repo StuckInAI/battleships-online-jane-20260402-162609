@@ -1,0 +1,192 @@
+.container {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  animation: fadeInDown 0.5s ease;
+}
+
+.resultBanner {
+  text-align: center;
+}
+
+.victoryText {
+  font-size: clamp(24px, 5vw, 48px);
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+.defeatText {
+  font-size: clamp(24px, 5vw, 48px);
+  letter-spacing: 8px;
+  margin-bottom: 10px;
+  animation: shake 0.5s ease infinite;
+}
+
+.resultAscii {
+  font-size: clamp(3px, 1vw, 8px);
+  font-family: monospace;
+  line-height: 1.4;
+  white-space: pre;
+  overflow: hidden;
+  color: var(--accent-green);
+  text-shadow: 0 0 5px var(--accent-green);
+}
+
+.statsContainer {
+  border: 2px solid var(--accent-green);
+  box-shadow: 0 0 15px var(--accent-green);
+  padding: 20px;
+  width: 100%;
+  background: rgba(0, 255, 65, 0.03);
+}
+
+.statsTitle {
+  font-size: 10px;
+  color: var(--accent-cyan);
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+  padding-bottom: 10px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.statBox {
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  padding: 12px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.statLabel {
+  font-size: 7px;
+  color: rgba(0, 255, 65, 0.6);
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.statValue {
+  font-size: 18px;
+  color: var(--accent-green);
+  text-shadow: 0 0 8px var(--accent-green);
+}
+
+.shipSummary {
+  border: 2px solid rgba(0, 255, 65, 0.4);
+  padding: 20px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.summaryTitle {
+  font-size: 10px;
+  color: var(--accent-cyan);
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.fleets {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.fleetCol {
+  flex: 1;
+  max-width: 280px;
+}
+
+.fleetLabel {
+  font-size: 8px;
+  color: var(--accent-cyan);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.2);
+  padding-bottom: 8px;
+}
+
+.fleetDivider {
+  width: 1px;
+  background: rgba(0, 255, 65, 0.3);
+  align-self: stretch;
+}
+
+.shipRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(0, 255, 65, 0.1);
+  font-size: 7px;
+}
+
+.shipSunk {
+  color: var(--accent-red);
+  font-size: 12px;
+}
+
+.shipSurvived {
+  color: var(--accent-green);
+  font-size: 12px;
+}
+
+.shipRowName {
+  flex: 1;
+  color: var(--accent-green);
+  letter-spacing: 1px;
+}
+
+.shipRowStatus {
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@keyframes pulse-green {
+  0%, 100% { text-shadow: 0 0 10px var(--accent-yellow), 0 0 20px var(--accent-yellow); }
+  50% { text-shadow: 0 0 30px var(--accent-yellow), 0 0 60px var(--accent-yellow); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fleets {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fleetDivider {
+    width: 100%;
+    height: 1px;
+  }
+}
