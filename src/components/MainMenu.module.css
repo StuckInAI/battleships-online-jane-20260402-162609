@@ -1,0 +1,134 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.asciiArt {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.ascii {
+  color: var(--accent-green);
+  font-size: clamp(4px, 1.2vw, 10px);
+  text-shadow: 0 0 5px var(--accent-green);
+  line-height: 1.4;
+  font-family: monospace;
+  white-space: pre;
+  overflow: hidden;
+}
+
+.shipArt {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.shipAscii {
+  color: var(--accent-cyan);
+  font-size: clamp(6px, 1.5vw, 11px);
+  text-shadow: 0 0 5px var(--accent-cyan);
+  line-height: 1.6;
+  font-family: monospace;
+  white-space: pre;
+}
+
+.menuBox {
+  border: 2px solid var(--accent-green);
+  box-shadow: 0 0 20px var(--accent-green), inset 0 0 20px rgba(0, 255, 65, 0.05);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  background: rgba(0, 255, 65, 0.03);
+}
+
+.menuTitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 25px;
+  letter-spacing: 4px;
+}
+
+.menuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.cursor {
+  color: var(--accent-green);
+  animation: blink 0.8s step-end infinite;
+  font-size: 12px;
+}
+
+.instructions {
+  border-top: 1px solid rgba(0, 255, 65, 0.3);
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.instrTitle {
+  font-size: 9px;
+  color: var(--accent-cyan);
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+}
+
+.instrItem {
+  font-size: 7px;
+  margin-bottom: 8px;
+  line-height: 1.8;
+  color: rgba(0, 255, 65, 0.8);
+  letter-spacing: 1px;
+}
+
+.legend {
+  border-top: 1px solid rgba(0, 255, 65, 0.3);
+  padding-top: 15px;
+}
+
+.legendTitle {
+  font-size: 9px;
+  color: var(--accent-cyan);
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+}
+
+.legendItems {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 7px;
+  color: rgba(0, 255, 65, 0.8);
+}
+
+.legendDot {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pressStart {
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 10px;
+}
